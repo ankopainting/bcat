@@ -78,10 +78,13 @@ class Bcat
 
   def content_for_head(inject='')
     [
-      "\n" * 1000,
+#      "\n" * 1000,
       "<!DOCTYPE html>",
       "<html>",
       "<head>",
+      "<style type='text/css'>",
+      "body {background: #090909; color: #bbb;font-size: 120%;}",
+      "</style>",
       "<!-- bcat was here -->",
       "<title>#{self[:title] || 'bcat'}</title>",
       inject.to_s,
